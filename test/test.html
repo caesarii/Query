@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #footer {
+            color: red;
+            border: 1px solid green;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Lorem ipsum dolor.</h1>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, reiciendis!</div>
+<div id="footer">Lorem ipsum dolor sit amet.</div>
+
+<script src="../Query.js"></script>
+<script>
+    const log = Q.log
+
+    // html
+    const footer = Q.e('#footer')
+    log(Q.html(footer))
+    Q.html(footer, 'hello qinghe')
+    Q.html(footer, 'hello qinghe', 'beforeend')
+
+    // style
+    log(Q.style(footer, 'border'))
+    log(Q.style(footer, 'margin-right'))
+
+</script>
+</body>
+</html>
